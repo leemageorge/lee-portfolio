@@ -6,3 +6,4 @@ const responseObj ={
     static: "display fixed content like information about a business,portfolio etc"
 } ;
 
+export default responseObj

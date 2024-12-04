@@ -1,4 +1,4 @@
-
+import responseObj from "./response";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
