@@ -447,13 +447,17 @@ input,textarea{
     position: relative;
     /* bottom: 0; */
     width: 100%;
+    padding: 1rem 0;
     background-color: var(--color-grey-100);
    
 }
 .footer .social__media{
     text-align: center;
     background-color: var(--color-grey-100);
- 
+   
+}
+.footer .social__media a{
+    margin-right: 1.5rem;
 }
 .footer p{
     text-align: center;
