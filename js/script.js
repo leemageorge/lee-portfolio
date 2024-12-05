@@ -64,9 +64,9 @@ buttons.forEach((button,index)=>{
   // multitext
 
   const typed = new Typed('.multiple-text', {
-    strings: ['Web Developer','SEO Analyst'],
+    strings: ['Web Developer','frontend developer','backend developer','SEO Consultant'],
     typeSpeed: 100,
-    backSpeed:100,
+    // backSpeed:100,
     backDelay:1200,
     loop:true
   });
