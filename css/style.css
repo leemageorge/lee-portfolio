@@ -127,35 +127,59 @@ p{
 
 /* ==========HOME SECTION================ */
 .home{
-    margin-top: 5rem;
-    min-height: calc(100vh - 5rem);
+    margin-top: 4rem;
+    padding: 2rem 0;
+    height: 100vh;
+    align-self: center;
+    min-height: calc(10vh - 5rem);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    grid-template-columns: 40% 60%;
+    gap: 3rem;
+
+}
+.home__content h2,h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+.home__content p{
+    font-size: 2rem;
 }
 .home__image-section{
     background-color: var(--main-color); 
-    position: relative;
-    
+    position: relative;  
+   height: 100vh;
 }
 .home__image-card{
  position: absolute;
- top: 8%;
- left: 60%;
- width: 350px;
+ top: 50%;
+ left: 100%; 
+ transform: translate(-50%, -50%);
+ width: 60%;
  background-color: var(--main-color); 
  box-shadow: 0 0 15px 0 black;
  text-align: center;
  z-index: 999;
+ 
 }
-.home__image-card img{
+.home__image-card h2{
+    color: var(--color-hightlighter);
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.home__image-card h3{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.home__image-card img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 20px;
-    
-}
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)) grayscale(100%) ;
+}   
 .home__image-content{
     display: flex;
     flex-direction: column;
@@ -184,7 +208,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 1.5rem;
     background-color: var(--bg-color);
     height: auto;
@@ -203,23 +227,32 @@ p{
 .home__content{
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 23%;
     right: 20%;
+  
 }
 .home__content h2{
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
-
+.home__content h2 span{
+    color: var(--color-hightlighter);
+}
 .home__content p{
     text-align: justify;
-    font-size: 1.2rem;
-    line-height: 26px;
-    margin: 2rem 0;
+    font-size: 1.5rem;
+    line-height: 36px;
+   margin-bottom: 1rem;
+}
+.home__content h4{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.home__content h4 span{
+    color: var(--color-hightlighter);
 }
 .home__buttons{
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
 }
 /* ==========ABOUT SECTION================ */
@@ -231,39 +264,53 @@ p{
 
 }
 .about__content{
-    padding: 5rem 3rem;
+    padding: 2rem 3rem;
     background-color: var(--color-grey-100);
 
 }
 
 .about__content p{
     text-align: justify;
-    margin-top: 2rem;
-    font-size: 1rem;
-    line-height: 28px;
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 36px;
     color: var(--color-grey);
 }
 .about__content h3{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--color-hightlighter);
 } 
 .about__skills{
-    padding: 5rem 3rem ;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;                                                                                      
     background-color: var(--main-color);
+    padding:0 3rem;
 }
 .about__btn{
     display: flex;
     gap: 1rem;
+    padding:0 3rem;
+
+}
+.about__btn .btns{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem 2rem;
+   
+
 }
 .content__box{
     padding: 2rem;
 }
 .text__box h4{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 1rem 0 1rem;
 }
 .text__box span{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .content__box .content:not(:first-child){
     display: none;
@@ -293,7 +340,7 @@ p{
     font-size: 1.6rem;
 }
 .service__box p{
-
+font-size: 1.3rem;
     margin: 1rem 0;
 }
 /* ==========PROJECT SECTION================ */
@@ -414,16 +461,19 @@ p{
  
 }
 .contact-form{
-
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2rem;
 
 }
 
 .form__name{
     display: flex;
     gap: 1.2rem;
+  
+}
+.contact-form input, textarea{
+    font-size: 1.2rem;
 }
 .contact-form input[type="text"]{
     width: 50%;
@@ -438,9 +488,11 @@ input,textarea{
 }
 .textarea{
     resize: none;
+    
 }
 .form-btn{
     width: max-content;
+    margin: 0 auto;
     
 }
 /* ==========Footer================ */
@@ -565,139 +617,147 @@ input,textarea{
 }
 
 /* ==========RESPONSIVE =============== */
-@media (max-width: 1100px){
 
-    h1{
-        font-size: 2rem;
+@media (max-width: 1100px) {
+    h1 {
+      font-size: 2rem;
     }
-    .heading{
-        font-size: 2rem;
+    .heading {
+      font-size: 2.5rem;
     }
-    section{
-        padding:2rem 3% 1rem;
+    section {
+      padding: 2rem 3% 1rem;
     }
-    .heading{
-        font-size: 3rem;
+    .header {
+      padding: 1rem 3%;
     }
-    .header{
-        padding: 1rem 3%;
-        
+    .logo {
+      font-size: 1.7rem;
     }
-    .logo{
-        font-size: 1.7rem;
+    .navbar {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: var(--main-color);
+      width: 255px;
+      min-height: 100vh;
     }
-    .navbar{
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right:-100%;
-        background-color: var(--main-color);
-        width: 255px;
-        min-height: 100vh;
- 
+    .navbar.show {
+      right: 0;
     }
-    .navbar.show{
-        right: 0;
+    .navbar a {
+      font-size: 1rem;
+      padding: 17px;
+      text-align: center;
     }
-    .navbar a{
-        font-size: 1rem;
-        padding: 17px;
-        text-align: center;
-  
+    #menu__icon {
+      display: block;
     }
-    #menu__icon{
-        display: block;
+    .home {
+      grid-template-columns: 1fr;
     }
-    .home{
-        grid-template-columns: 1fr;
-        /* background-color: rgb(252, 239, 244); */
-       
+    .home__image-section {
+      height: 30vh;
     }
-    .home__image-card{
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .home__image-card {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .home__content h2, h3 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    .home__content p {
+      font-size: 1.5rem;
+    }
+    .home__image-card h2 {
+      font-size: 2rem;
+    }
+    .home__image-card h3 {
+      font-size: 1.5rem;
+    }
+    .home__content {
+      position: static;
+      padding: 1rem 3rem;
+      text-align: center;
+      margin-top: 15rem;
+    }
+    .home__content p {
+      text-align: justify;
+      font-size: 1.5rem;
+      line-height: 36px;
+      margin-bottom: 1rem;
+    }
+    .home__buttons {
+      display: flex;
+      align-content: center;
+      justify-content: center;
     }
     
-    .home__content{
-        top: 80%;
-        left: 0%;
-        right: 0%;
-      
+    .about__container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
     }
-    
-    .home__content h2{
-        display: none;
+    .about__content {
+      padding: 1rem;
     }
-    .home__content h3{
-        display: none;
+    .about__content p {
+      text-align: justify;
+      margin-top: 2rem;
+      padding: 2rem;
     }
-    .home__content p{
-        display: none;
+    .about__content h3 {
+      text-align: center;
     }
-    .home__buttons{
-    
-        gap: 1rem;
+    .about__skills {
+      padding: 1rem;
     }
-    
-    .about__container{
-        grid-template-columns: 1fr;
-        padding: 1rem;
+    .about__btn {
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0 1rem;
     }
-    .about__content{
-        padding: 1rem;
+    .about__btn .btns {
+      margin-left: 0.5rem;
+      font-size: 0.775rem;
+      padding: 1rem;
+      letter-spacing: 1px;
     }
-    .about__content p{
-        text-align: justify;
-        margin-top: 2rem;
-        font-size: 1rem;
+    .content__box {
+      padding: 1rem;
     }
-    .about__content h3{
-        font-size: 1.5rem;
+    .text__box h4 {
+      font-size: 1.3rem;
     }
-    .about__skills{
-        padding: 1rem;
+    .text__box span {
+      font-size: 1rem;
     }
-    .about__btn{
-        flex-wrap: wrap;
-        gap: 0.5rem;
+    .contact {
+      margin-top: 0rem;
     }
-    .about__btn .btns{
-        margin-left: .5rem;
+    .contact__container {
+      grid-template-columns: 1fr;
+      padding-left: 0;
     }
-    .content__box{
-        padding: 1rem;
+    .contact__aside {
+      bottom: 0;
     }
-    .text__box h4{
-        font-size: 1rem;
-
+    .contact__form {
+      padding: 2rem;
     }
-    .text__box span{
-        font-size: 0.875rem;
+    .form__name {
+      flex-direction: column;
     }
-    .contact{
-        margin-top: 0rem;
-       }
-    .contact__container{
-        grid-template-columns: 1fr;
-        padding-left: 0;
+    .contact-form input[type="text"] {
+      width: 100%;
     }
-    .contact__aside{
-        bottom: 0;
+    .services {
+      padding: 1.5rem;
     }
-    .contact__form{
-        padding:2rem;
-       
-      }
-    .form__name{
-        flex-direction: column;
-
-    }
-  
-    .contact-form input[type="text"]{
-        width: 100%;
-    }
-}
+  }
 
 #preloader{
     height: 100vh;
@@ -710,4 +770,48 @@ input,textarea{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
+}
+@media (max-width: 768px){
+    .heading{
+        font-size: 2rem;
+    }
+    .home__image-section{
+        height: 40vh;
+    }
+    .about{
+        position: static;
+    margin-top:10rem;
+    }
+}
+@media (max-width:460px){
+    .heading{
+        font-size: 2.25rem;
+    }
+    .home__image-section{
+        height: 100%;
+       width: 100%;
+    }
+    .home__image-card{
+        width: 90%;
+    }
+    .home__content h2, h3 {
+        font-size: 1.5rem;
+    }
+    
+   
+    .home__content p {
+        font-size: 1.2rem;
+    }
+    .about{
+      
+      margin-top: 42%;
+    }
+    .about__content h3{
+        font-size: 1.5rem;
+    }
+    .about__content p{
+        font-size: 1.2rem;
+        margin-top: .5rem;
+    }
+ 
 }
