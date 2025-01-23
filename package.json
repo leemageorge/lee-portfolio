@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
     "vite": "^6.0.1"
   },
   "dependencies": {
-    "@netlify/plugin-sitemap": "^0.8.1",
     "aos": "^2.3.4"
   }
 }
