@@ -212,13 +212,11 @@ p{
     margin-top: 1.5rem;
     background-color: var(--bg-color);
     height: auto;
-    padding: 1rem 0;
-    cursor: pointer;
-  
+    padding: 1rem 0; 
 }
 .social__media a{
-   color: var(--color-grey);
-
+   color: var(--color-hightlighter);
+    cursor: pointer;
   
 }
 .home__contentSection{
